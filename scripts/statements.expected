@@ -1,0 +1,97 @@
+@four_mul_volume_sq : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V]
+  [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (t : Affine.Triangle ℝ P),
+  4 * Affine.Simplex.volume t ^ 2 =
+    ‖t.points 1 -ᵥ t.points 0‖ ^ 2 * ‖t.points 2 -ᵥ t.points 0‖ ^ 2 -
+      inner ℝ (t.points 1 -ᵥ t.points 0) (t.points 2 -ᵥ t.points 0) ^ 2
+@four_mul_volume_faceOpposite_sq : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (s : Affine.Simplex ℝ P 3),
+  4 * (s.faceOpposite 0).volume ^ 2 =
+      ‖s.points 2 -ᵥ s.points 1‖ ^ 2 * ‖s.points 3 -ᵥ s.points 1‖ ^ 2 -
+        inner ℝ (s.points 2 -ᵥ s.points 1) (s.points 3 -ᵥ s.points 1) ^ 2 ∧
+    4 * (s.faceOpposite 1).volume ^ 2 =
+        ‖s.points 2 -ᵥ s.points 0‖ ^ 2 * ‖s.points 3 -ᵥ s.points 0‖ ^ 2 -
+          inner ℝ (s.points 2 -ᵥ s.points 0) (s.points 3 -ᵥ s.points 0) ^ 2 ∧
+      4 * (s.faceOpposite 2).volume ^ 2 =
+          ‖s.points 1 -ᵥ s.points 0‖ ^ 2 * ‖s.points 3 -ᵥ s.points 0‖ ^ 2 -
+            inner ℝ (s.points 1 -ᵥ s.points 0) (s.points 3 -ᵥ s.points 0) ^ 2 ∧
+        4 * (s.faceOpposite 3).volume ^ 2 =
+          ‖s.points 1 -ᵥ s.points 0‖ ^ 2 * ‖s.points 2 -ᵥ s.points 0‖ ^ 2 -
+            inner ℝ (s.points 1 -ᵥ s.points 0) (s.points 2 -ᵥ s.points 0) ^ 2
+@eq_of_cofactor_eq : ∀ {x y z p q r : ℝ},
+  x * y * z + 2 * p * q * r - x * p ^ 2 - y * q ^ 2 - z * r ^ 2 ≠ 0 →
+    y * z - p ^ 2 = x * z - q ^ 2 →
+      y * z - p ^ 2 = x * y - r ^ 2 →
+        y * z - p ^ 2 = (x + y - 2 * r) * (x + z - 2 * q) - (x + p - q - r) ^ 2 → z = x + y - 2 * r
+@gram_det_ne_zero : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℝ V]
+  [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (s : Affine.Simplex ℝ P 3),
+  ‖s.points 1 -ᵥ s.points 0‖ ^ 2 * ‖s.points 2 -ᵥ s.points 0‖ ^ 2 * ‖s.points 3 -ᵥ s.points 0‖ ^ 2 +
+            2 * inner ℝ (s.points 2 -ᵥ s.points 0) (s.points 3 -ᵥ s.points 0) *
+                inner ℝ (s.points 1 -ᵥ s.points 0) (s.points 3 -ᵥ s.points 0) *
+              inner ℝ (s.points 1 -ᵥ s.points 0) (s.points 2 -ᵥ s.points 0) -
+          ‖s.points 1 -ᵥ s.points 0‖ ^ 2 * inner ℝ (s.points 2 -ᵥ s.points 0) (s.points 3 -ᵥ s.points 0) ^ 2 -
+        ‖s.points 2 -ᵥ s.points 0‖ ^ 2 * inner ℝ (s.points 1 -ᵥ s.points 0) (s.points 3 -ᵥ s.points 0) ^ 2 -
+      ‖s.points 3 -ᵥ s.points 0‖ ^ 2 * inner ℝ (s.points 1 -ᵥ s.points 0) (s.points 2 -ᵥ s.points 0) ^ 2 ≠
+    0
+@dist_eq_of_volume_faceOpposite_eq : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (s : Affine.Simplex ℝ P 3),
+  (∀ (i j : Fin (3 + 1)), (s.faceOpposite i).volume = (s.faceOpposite j).volume) →
+    dist (s.points 0) (s.points 1) = dist (s.points 2) (s.points 3) ∧
+      dist (s.points 0) (s.points 2) = dist (s.points 1) (s.points 3) ∧
+        dist (s.points 0) (s.points 3) = dist (s.points 1) (s.points 2)
+@volume_faceOpposite_eq_of_dist_eq : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (s : Affine.Simplex ℝ P 3),
+  dist (s.points 0) (s.points 1) = dist (s.points 2) (s.points 3) →
+    dist (s.points 0) (s.points 2) = dist (s.points 1) (s.points 3) →
+      dist (s.points 0) (s.points 3) = dist (s.points 1) (s.points 2) →
+        ∀ (i j : Fin 4), (s.faceOpposite i).volume = (s.faceOpposite j).volume
+@volume_faceOpposite_eq_iff_dist_eq : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (s : Affine.Simplex ℝ P 3),
+  (∀ (i j : Fin (3 + 1)), (s.faceOpposite i).volume = (s.faceOpposite j).volume) ↔
+    dist (s.points 0) (s.points 1) = dist (s.points 2) (s.points 3) ∧
+      dist (s.points 0) (s.points 2) = dist (s.points 1) (s.points 3) ∧
+        dist (s.points 0) (s.points 3) = dist (s.points 1) (s.points 2)
+@infDist_facetSpan_affineCombination : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] {n : ℕ} [inst_4 : NeZero n]
+  (s : Affine.Simplex ℝ P n) (i : Fin (n + 1)) {w : Fin (n + 1) → ℝ},
+  ∑ j, w j = 1 →
+    Metric.infDist ((Finset.affineCombination ℝ Finset.univ s.points) w) ↑(facetSpan s i) = |w i| * s.height i
+@sum_infDist_facetSpan_const_iff : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] {n : ℕ} [inst_4 : NeZero n]
+  (s : Affine.Simplex ℝ P n),
+  (∃ c, ∀ p ∈ s.closedInterior, ∑ i, Metric.infDist p ↑(facetSpan s i) = c) ↔
+    ∀ (i j : Fin (n + 1)), s.height i = s.height j
+@sum_infDist_facetSpan_const_iff_volume : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] {n : ℕ} [inst_4 : NeZero n]
+  (s : Affine.Simplex ℝ P n),
+  (∃ c, ∀ p ∈ s.closedInterior, ∑ i, Metric.infDist p ↑(facetSpan s i) = c) ↔
+    ∀ (i j : Fin (n + 1)), (s.faceOpposite i).volume = (s.faceOpposite j).volume
+@sum_infDist_facetSpan_const_iff_dist_eq : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (s : Affine.Simplex ℝ P 3),
+  (∃ c, ∀ p ∈ s.closedInterior, ∑ i, Metric.infDist p ↑(facetSpan s i) = c) ↔
+    dist (s.points 0) (s.points 1) = dist (s.points 2) (s.points 3) ∧
+      dist (s.points 0) (s.points 2) = dist (s.points 1) (s.points 3) ∧
+        dist (s.points 0) (s.points 3) = dist (s.points 1) (s.points 2)
+@sum_infDist_facetSpan_eq_height : ∀ {V : Type u_1} {P : Type u_2} [inst : NormedAddCommGroup V]
+  [inst_1 : InnerProductSpace ℝ V] [inst_2 : MetricSpace P] [inst_3 : NormedAddTorsor V P] (s : Affine.Simplex ℝ P 3),
+  dist (s.points 0) (s.points 1) = dist (s.points 2) (s.points 3) →
+    dist (s.points 0) (s.points 2) = dist (s.points 1) (s.points 3) →
+      dist (s.points 0) (s.points 3) = dist (s.points 1) (s.points 2) →
+        ∀ {p : P}, p ∈ s.closedInterior → ∑ i, Metric.infDist p ↑(facetSpan s i) = s.height 0
+Examples.affineIndependent : AffineIndependent ℝ ![Examples.A₀, Examples.B₀, Examples.C₀, Examples.D₀]
+Examples.dist_eq : dist (Examples.disphenoid.points 0) (Examples.disphenoid.points 1) =
+    dist (Examples.disphenoid.points 2) (Examples.disphenoid.points 3) ∧
+  dist (Examples.disphenoid.points 0) (Examples.disphenoid.points 2) =
+      dist (Examples.disphenoid.points 1) (Examples.disphenoid.points 3) ∧
+    dist (Examples.disphenoid.points 0) (Examples.disphenoid.points 3) =
+      dist (Examples.disphenoid.points 1) (Examples.disphenoid.points 2)
+Examples.dist_ne : dist (Examples.disphenoid.points 0) (Examples.disphenoid.points 1) ≠
+  dist (Examples.disphenoid.points 0) (Examples.disphenoid.points 2)
+Examples.volume_faceOpposite_eq : ∀ (i j : Fin 4),
+  (Examples.disphenoid.faceOpposite i).volume = (Examples.disphenoid.faceOpposite j).volume
+Examples.volume_faceOpposite : ∀ (i : Fin 4), (Examples.disphenoid.faceOpposite i).volume = 7 / 2
+Examples.dist_eq_of_bang : dist Examples.A₀ Examples.B₀ = dist Examples.C₀ Examples.D₀ ∧
+  dist Examples.A₀ Examples.C₀ = dist Examples.B₀ Examples.D₀ ∧
+    dist Examples.A₀ Examples.D₀ = dist Examples.B₀ Examples.C₀
+@Examples.sum_infDist_eq : ∀ {p : EuclideanSpace ℝ (Fin 3)},
+  p ∈ Examples.disphenoid.closedInterior →
+    ∑ i, Metric.infDist p ↑(facetSpan Examples.disphenoid i) = Examples.disphenoid.height 0

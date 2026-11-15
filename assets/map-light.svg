@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430" role="img" font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif">
+<rect width="720" height="430" fill="#ffffff"/>
+<defs><marker id="ah-light" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6577"/></marker></defs>
+<text x="24" y="30" font-size="13" letter-spacing="1.5" fill="#5b6577">FROM MATHLIB</text>
+<rect x="24" y="44" width="320" height="56" rx="6" fill="rgba(26,34,51,0.035)" stroke="#9aa2af" stroke-width="1"/>
+<text x="184.0" y="69" font-size="15.5" text-anchor="middle" fill="#1a2233">Heron's formula</text>
+<text x="184.0" y="89" font-size="11.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5b6577">volume_sq_eq_mul_sub_mul_sub_mul_sub</text>
+<rect x="376" y="44" width="320" height="56" rx="6" fill="rgba(26,34,51,0.035)" stroke="#9aa2af" stroke-width="1"/>
+<text x="536.0" y="69" font-size="15.5" text-anchor="middle" fill="#1a2233">Independent vectors: Gram determinant ≠ 0</text>
+<text x="536.0" y="89" font-size="11.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5b6577">det_gram_ne_zero_iff_linearIndependent</text>
+<text x="24" y="136" font-size="13" letter-spacing="1.5" fill="#5b6577">THIS PROJECT</text>
+<rect x="24" y="150" width="320" height="76" rx="6" fill="rgba(26,34,51,0.035)" stroke="#1d4f9c" stroke-width="1.6"/>
+<text x="184.0" y="175" font-size="15.5" text-anchor="middle" fill="#1a2233">4 · area² = ‖u‖²‖v‖² − ⟨u, v⟩²</text>
+<text x="184.0" y="195" font-size="11.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5b6577">four_mul_volume_sq</text>
+<text x="184.0" y="213" font-size="12.5" text-anchor="middle" fill="#5b6577">the four face areas, from six numbers</text>
+<rect x="376" y="150" width="320" height="76" rx="6" fill="rgba(26,34,51,0.035)" stroke="#1d4f9c" stroke-width="1.6"/>
+<text x="536.0" y="175" font-size="15.5" text-anchor="middle" fill="#1a2233">det G ≠ 0 for a real tetrahedron</text>
+<text x="536.0" y="195" font-size="11.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5b6577">gram_det_ne_zero</text>
+<text x="536.0" y="213" font-size="12.5" text-anchor="middle" fill="#5b6577">G = Gram matrix of the edges at one vertex</text>
+<rect x="150" y="256" width="420" height="76" rx="6" fill="rgba(26,34,51,0.035)" stroke="#cb3a24" stroke-width="1.6"/>
+<text x="360.0" y="281" font-size="15.5" text-anchor="middle" fill="#1a2233">equal areas  ⟹  (‖c‖² − ‖a − b‖²) · det G = 0</text>
+<text x="360.0" y="301" font-size="11.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5b6577">eq_of_cofactor_eq</text>
+<text x="360.0" y="319" font-size="12.5" text-anchor="middle" fill="#5b6577">one polynomial identity:  adj(adj G) = det G · G</text>
+<rect x="150" y="358" width="420" height="56" rx="6" fill="rgba(26,34,51,0.035)" stroke="#e1a614" stroke-width="1.6"/>
+<text x="360.0" y="383" font-size="15.5" text-anchor="middle" fill="#1a2233">Equal face areas  ⟹  opposite edges equal</text>
+<text x="360.0" y="403" font-size="11.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#5b6577">dist_eq_of_volume_faceOpposite_eq</text>
+<line x1="184" y1="100" x2="184" y2="148" stroke="#5b6577" stroke-width="1.3" marker-end="url(#ah-light)"/>
+<line x1="536" y1="100" x2="536" y2="148" stroke="#5b6577" stroke-width="1.3" marker-end="url(#ah-light)"/>
+<line x1="184" y1="226" x2="250" y2="254" stroke="#5b6577" stroke-width="1.3" marker-end="url(#ah-light)"/>
+<line x1="536" y1="226" x2="470" y2="254" stroke="#5b6577" stroke-width="1.3" marker-end="url(#ah-light)"/>
+<line x1="360" y1="332" x2="360" y2="356" stroke="#5b6577" stroke-width="1.3" marker-end="url(#ah-light)"/>
+</svg>

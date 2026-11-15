@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you refer to this formalization, please cite it as below."
+title: "Bang's theorem in Lean 4"
+abstract: >-
+  A Lean 4 and Mathlib formalization of Bang's theorem on equifacial tetrahedra: a tetrahedron
+  whose four faces have equal area has opposite edges equal in pairs. With the converse, and the
+  corollary that the sum of the distances from a point to the four faces is constant exactly for
+  such tetrahedra. No sorry, standard axioms only; re-checked by leanchecker and by the
+  independent checker nanoda, with tamper tests.
+type: software
+authors:
+  - alias: redzwn
+  - name: "Claude (Anthropic)"
+repository-code: "https://github.com/redzwn/bang-lean"
+url: "https://bang-lean.pages.dev/"
+license: Apache-2.0
+version: 1.0.0
+date-released: 2026-11-15
+keywords:
+  - Lean 4
+  - Mathlib
+  - formal verification
+  - theorem proving
+  - Euclidean geometry
+  - tetrahedron
+  - Bang's theorem

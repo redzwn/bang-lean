@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif">
+<rect width="720" height="400" fill="#0d1117"/>
+<line x1="118.2" y1="318.2" x2="118.2" y2="93.3" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="118.2" y1="318.2" x2="250.5" y2="341.0" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="118.2" y1="318.2" x2="159.5" y2="300.0" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="118.2" y1="93.3" x2="250.5" y2="116.0" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="118.2" y1="93.3" x2="159.5" y2="75.0" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="250.5" y1="341.0" x2="250.5" y2="116.0" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="250.5" y1="341.0" x2="291.8" y2="322.7" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="250.5" y1="116.0" x2="291.8" y2="97.8" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="159.5" y1="300.0" x2="159.5" y2="75.0" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="159.5" y1="300.0" x2="291.8" y2="322.7" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="159.5" y1="75.0" x2="291.8" y2="97.8" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="291.8" y1="322.7" x2="291.8" y2="97.8" stroke="#6d7685" stroke-width="1" stroke-dasharray="3 4"/>
+<polygon points="291.8,322.7 159.5,75.0 250.5,116.0" fill="rgba(91,143,223,0.14)"/>
+<polygon points="118.2,318.2 291.8,322.7 250.5,116.0" fill="rgba(91,143,223,0.14)"/>
+<polygon points="118.2,318.2 159.5,75.0 250.5,116.0" fill="rgba(91,143,223,0.14)"/>
+<polygon points="118.2,318.2 291.8,322.7 159.5,75.0" fill="rgba(91,143,223,0.14)"/>
+<line x1="291.8" y1="322.7" x2="250.5" y2="116.0" stroke="#e8664f" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="159.5" y1="75.0" x2="250.5" y2="116.0" stroke="#5b8fdf" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="118.2" y1="318.2" x2="250.5" y2="116.0" stroke="#efb532" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="291.8" y1="322.7" x2="159.5" y2="75.0" stroke="#efb532" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="118.2" y1="318.2" x2="291.8" y2="322.7" stroke="#5b8fdf" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="118.2" y1="318.2" x2="159.5" y2="75.0" stroke="#e8664f" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="118.2" cy="318.2" r="4.2" fill="#e4e7ee"/>
+<text x="104.2" y="332.2" font-size="17" font-style="italic" text-anchor="middle" fill="#e4e7ee">A</text>
+<circle cx="291.8" cy="322.7" r="4.2" fill="#e4e7ee"/>
+<text x="303.8" y="338.7" font-size="17" font-style="italic" text-anchor="middle" fill="#e4e7ee">B</text>
+<circle cx="159.5" cy="75.0" r="4.2" fill="#e4e7ee"/>
+<text x="173.5" y="69.0" font-size="17" font-style="italic" text-anchor="middle" fill="#e4e7ee">C</text>
+<circle cx="250.5" cy="116.0" r="4.2" fill="#e4e7ee"/>
+<text x="267.5" y="110.0" font-size="17" font-style="italic" text-anchor="middle" fill="#e4e7ee">D</text>
+<text x="410" y="78" font-size="21" fill="#e4e7ee">Four faces of equal area</text>
+<text x="410" y="106" font-size="15" fill="#a9b1bf">force the opposite edges to match:</text>
+<line x1="410" y1="145" x2="454" y2="145" stroke="#5b8fdf" stroke-width="3.2" stroke-linecap="round"/>
+<text x="470" y="150" font-size="19" font-style="italic" fill="#5b8fdf">AB = CD</text>
+<text x="600" y="150" font-size="19" fill="#e4e7ee">= √5</text>
+<line x1="410" y1="187" x2="454" y2="187" stroke="#e8664f" stroke-width="3.2" stroke-linecap="round"/>
+<text x="470" y="192" font-size="19" font-style="italic" fill="#e8664f">AC = BD</text>
+<text x="600" y="192" font-size="19" fill="#e4e7ee">= √10</text>
+<line x1="410" y1="229" x2="454" y2="229" stroke="#efb532" stroke-width="3.2" stroke-linecap="round"/>
+<text x="470" y="234" font-size="19" font-style="italic" fill="#efb532">AD = BC</text>
+<text x="600" y="234" font-size="19" fill="#e4e7ee">= √13</text>
+<text x="410" y="296" font-size="15" fill="#a9b1bf">Here: four corners of a 1 × 2 × 3 box.</text>
+<text x="410" y="320" font-size="15" fill="#a9b1bf">Every face has sides √5, √10, √13</text>
+<text x="410" y="344" font-size="15" fill="#a9b1bf">and area 7/2. It is not regular.</text>
+</svg>
